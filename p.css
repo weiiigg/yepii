@@ -1,0 +1,115 @@
+/* Fixed banner styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar ul li a:hover {
+    color: #ff6600;
+}
+
+/* Space below the banner to prevent overlapping with content */
+main {
+    padding-top: 60px;
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+}
+/* Body and container settings */
+body {
+    background-image: radial-gradient(circle, #0f0f0f, #0f0f0f, #0f0f0f, #0f0f0f);
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+  }
+  
+/* Typography */
+h1 {
+    font-size: 52px;
+    color: #ffffff;
+    letter-spacing: 2px;
+    margin-top: 20px;
+  }
+  h1 span {
+    font-style: italic;
+    font-weight: 300;
+  }
+  
+  p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #d3d3d3;
+  }
+  
+  a {
+    color: #8f83ff;
+    text-decoration: underline;
+    transition: color 0.3s;
+  }
+  
+  a:hover {
+    color: #471eff;
+  }
+  .single-line-center {
+    height: 600px;
+    line-height: 30px; /* 設定和高度相同的行高 */
+    text-align: center; /* 水平置中 */
+}
+/* Full-screen background with dark overlay */
+body {
+    position: relative;
+    background-image: url(img/0000.gif); /* Replace with the path to your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: #ffffff;
+}
+
+/* Dark overlay */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Adjust 0.6 for 60% opacity */
+    z-index: -1; /* Keeps the overlay behind the content */
+}
